@@ -19,8 +19,9 @@ from firstapp import views
 from django.conf import settings
 
 urlpatterns = [
-    path("help/",include('firstapp.urls')),
-    path('', views.help, name='help'),
+    path("index/",include('firstapp.urls')),
+    path("user/",include('firstapp.urls')),
+    path('', views.help, name='index'),
     path("admin/", admin.site.urls),
 ]
 
